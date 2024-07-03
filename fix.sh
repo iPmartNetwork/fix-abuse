@@ -12,11 +12,9 @@ BLUE='\033[0;34m'
 MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color 
 
-
-
 cur_dir=$(pwd)
 # check root
-#[[ $EUID -ne 0 ]] && echo -e "${Purple}Fatal error: ${plain} Please run this script with root privilege \n " && exit 1
+#[[ $EUID -ne 0 ]] && echo -e "${RED}Fatal error: ${plain} Please run this script with root privilege \n " && exit 1
 
 install_jq() {
     if ! command -v jq &> /dev/null; then
@@ -72,18 +70,17 @@ _/___/________/_/__/_(___(_/_____(_ __/___|/____(___ _(_ __|/_|/__(___/_/_____/_
 EOF
     echo -e "${NC}"
 
-    echo "+-------------------------------------------------------------------------------------+"
-    echo -e "${Cyan}Server Country:${NC} $SERVER_COUNTRY"
-    echo -e "${Cyan}Server IP:${NC} $SERVER_IP"
-    echo -e "${Cyan}Server ISP:${NC} $SERVER_ISP"
-    echo "+---------------------------------------------------------------+"
+    echo -e "${cyan}Server Country:${NC} $SERVER_COUNTRY"
+    echo -e "${cyan}Server IP:${NC} $SERVER_IP"
+    echo -e "${cyan}Server ISP:${NC} $SERVER_ISP"
+    echo "══════════════════════════════════════════════════════════════════════════════════════"
     echo -e "${YELLOW}Please choose an option:${NC}"
-    echo "+---------------------------------------------------------------+"
-    echo -e "${Cyan| 1  - Abuse Fixer"
+    echo "══════════════════════════════════════════════════════════════════════════════════════"
+    echo -e "${cyan}| 1  - Abuse Fixer"
     echo -e "${White}| 2  - Status "
-    echo -e "${Cyan}| 3  - Unistall"
+    echo -e "${cyan}| 3  - Unistall"
     echo -e "${White}| 0  - Exit"
-    echo "+---------------------------------------------------------------+"
+    echo "══════════════════════════════════════════════════════════════════════════════════════"
     echo -e "\033[0m"
 
     read -p "Enter option number: " choice
