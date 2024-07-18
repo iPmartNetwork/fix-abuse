@@ -76,10 +76,9 @@ EOF
     echo "══════════════════════════════════════════════════════════════════════════════════════"
     echo -e "${YELLOW}Please choose an option:${NC}"
     echo "══════════════════════════════════════════════════════════════════════════════════════"
-    echo -e "${cyan}| 1  - Abuse Fixer"
-    echo -e "${White}| 2  - Disab;e IP "
-    echo -e "${cyan}| 3  - Unistall"
-    echo -e "${White}| 0  - Exit"
+    echo -e "${cyan} 1  - Abuse Fixer"
+    echo -e "${White} 2  - Disable IP "
+    echo -e "${cyan} 0  - Exit"
     echo "══════════════════════════════════════════════════════════════════════════════════════"
     echo -e "\033[0m"
 
@@ -89,7 +88,7 @@ EOF
         install_fixer
         ;;
     2)
-        disable_ip
+        disable_rule
         ;;
     0)
         echo -e "${YELLOW}Exit...${NC}"
@@ -115,7 +114,8 @@ install_fixer(){
 
 }
 
-disable_ip(){
+disable_rule(){
+
 ufw deny out from any to 10.0.0.0/8
 ufw deny out from any to 172.16.0.0/12
 ufw deny out from any to 192.168.0.0/16
@@ -154,4 +154,5 @@ ufw deny out from any to 198.18.140.0/24
 ufw deny out from any to 102.230.9.0/24
 ufw deny out from any to 102.233.71.0/24
 }
+
 loader
