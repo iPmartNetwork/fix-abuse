@@ -77,7 +77,7 @@ EOF
     echo -e "${YELLOW}Please choose an option:${NC}"
     echo "══════════════════════════════════════════════════════════════════════════════════════"
     echo -e "${cyan}| 1  - Abuse Fixer"
-    echo -e "${White}| 2  - Disable Rule "
+    echo -e "${White}| 2  - Status "
     echo -e "${cyan}| 3  - Unistall"
     echo -e "${White}| 0  - Exit"
     echo "══════════════════════════════════════════════════════════════════════════════════════"
@@ -115,7 +115,7 @@ install_fixer(){
 
 }
 
-disable_rule(){
+disable_ip(){
 ufw deny out from any to 10.0.0.0/8
 ufw deny out from any to 172.16.0.0/12
 ufw deny out from any to 192.168.0.0/16
