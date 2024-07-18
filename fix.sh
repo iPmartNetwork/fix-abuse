@@ -77,7 +77,7 @@ EOF
     echo -e "${YELLOW}Please choose an option:${NC}"
     echo "══════════════════════════════════════════════════════════════════════════════════════"
     echo -e "${cyan}| 1  - Abuse Fixer"
-    echo -e "${White}| 2  - Status "
+    echo -e "${White}| 2  - Disab;e IP "
     echo -e "${cyan}| 3  - Unistall"
     echo -e "${White}| 0  - Exit"
     echo "══════════════════════════════════════════════════════════════════════════════════════"
