@@ -23,6 +23,12 @@ bash <(curl https://raw.githubusercontent.com/ipmartnetwork/fix-abuse/main/fix.s
 ```
 
 
+```
+bash <(curl https://raw.githubusercontent.com/ipmartnetwork/fix-abuse/main/fix-v2.sh)
+
+```
+
+
 
 
 # تلگرام
